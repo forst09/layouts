@@ -1,0 +1,98 @@
+/*НАЧАЛО ОБЩИХ СТИЛЕЙ */
+:root {
+    --black: #240532;
+    --dark: #665070;
+    --light: #918299;
+    --white: #FFFFFF;
+    --bg: #F9F7F8;
+    --accent: #D6FF3F;
+}
+
+body {
+    font-family: 'Winston', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--black);
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--white);
+    font-size: 14px;
+}
+
+.ellipsis {
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.display-none {
+    display: none;
+}
+
+.scroll {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+}
+
+.wrapper {
+    padding: 0 10px;
+}
+
+.img {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &--contain {
+        img {
+            object-fit: contain;
+        }
+    }
+
+    &--cover {
+        img {
+            object-fit: cover;
+        }
+    }
+}
+
+/*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
+/*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
+
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ */
+
+/*НАЧАЛО ОБЩИХ СТИЛЕЙ ПЛАНШЕТ*/
+@media(min-width: 640px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+}
+
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ ПЛАНШЕТ*/
+
+/*НАЧАЛО ОБЩИХ СТИЛЕЙ ДЕСКТОП*/
+@media(min-width: 1600px) {
+    body {
+        font-size: 16px;
+    }
+
+    .wrapper {
+        padding: 0;
+        max-width: 1520px;
+        margin: 0 auto;
+    }
+}
+
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ ДЕСКТОП*/

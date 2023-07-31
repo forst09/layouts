@@ -9,18 +9,15 @@
   --accent: #D6FF3F;
 }
 
-html {
-  font-size: 14px;
-}
-
 body {
   font-family: "Winston", sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: var(--gray);
+  color: var(--black);
   overflow-x: hidden;
   position: relative;
   background-color: var(--white);
+  font-size: 14px;
 }
 
 .ellipsis {
@@ -63,6 +60,28 @@ body {
   object-fit: cover;
 }
 
+/*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
+/*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ */
+/*НАЧАЛО ОБЩИХ СТИЛЕЙ ПЛАНШЕТ*/
+@media (min-width: 640px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ ПЛАНШЕТ*/
+/*НАЧАЛО ОБЩИХ СТИЛЕЙ ДЕСКТОП*/
+@media (min-width: 1600px) {
+  body {
+    font-size: 16px;
+  }
+  .wrapper {
+    padding: 0;
+    max-width: 1520px;
+    margin: 0 auto;
+  }
+}
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ ДЕСКТОП*/
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
 .header {
   padding-top: 10px;
@@ -84,7 +103,47 @@ body {
   height: 15px;
 }
 
+/*НАЧАЛО СТИЛЕЙ ШАПКИ ПЛАНШЕТ*/
+@media (min-width: 640px) {
+  .header {
+    padding-top: 20px;
+  }
+  .logo {
+    width: 26px;
+    height: 40px;
+  }
+}
+/*НАЧАЛО СТИЛЕЙ ШАПКИ ПЛАНШЕТ*/
+/*НАЧАЛО СТИЛЕЙ ШАПКИ ДЕСКТОП*/
+@media (min-width: 1600px) {
+  .header {
+    padding-top: 20px;
+  }
+  .header__wrapper {
+    justify-content: flex-start;
+  }
+  .logo {
+    width: 26px;
+    height: 40px;
+  }
+  .header__nav {
+    display: block;
+  }
+  .header__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-left: 359px;
+  }
+  .header__link {
+    display: inline-block;
+    font-weight: 600;
+    margin-left: auto;
+  }
+  .header__burger {
+    display: none;
+  }
+}
+/*НАЧАЛО СТИЛЕЙ ШАПКИ ДЕСКТОП*/
 /*КОНЕЦ СТИЛЕЙ ШАПКИ*/
-/*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
-/*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
-/*КОНЕЦ ОБЩИХ СТИЛЕЙ */

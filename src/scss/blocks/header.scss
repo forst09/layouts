@@ -1,0 +1,75 @@
+/*НАЧАЛО СТИЛЕЙ ШАПКИ*/
+.header {
+    padding-top: 10px;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 15px;
+    height: 22px;
+}
+
+.header__burger {
+    width: 30px;
+    height: 15px;
+}
+
+/*НАЧАЛО СТИЛЕЙ ШАПКИ ПЛАНШЕТ*/
+@media(min-width: 640px) {
+    .header {
+        padding-top: 20px;
+    }
+
+    .logo {
+        width: 26px;
+        height: 40px;
+    }
+}
+
+/*НАЧАЛО СТИЛЕЙ ШАПКИ ПЛАНШЕТ*/
+
+/*НАЧАЛО СТИЛЕЙ ШАПКИ ДЕСКТОП*/
+@media(min-width: 1600px) {
+    .header {
+        padding-top: 20px;
+    }
+
+    .header__wrapper {
+        justify-content: flex-start;
+    }
+
+    .logo {
+        width: 26px;
+        height: 40px;
+    }
+
+    .header__nav {
+        display: block;
+    }
+
+    .header__nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        margin-left: 359px;
+    }
+
+    .header__link {
+        display: inline-block;
+        font-weight: 600;
+        margin-left: auto;
+    }
+
+    .header__burger {
+        display: none;
+    }
+}
+
+/*НАЧАЛО СТИЛЕЙ ШАПКИ ДЕСКТОП*/
+/*КОНЕЦ СТИЛЕЙ ШАПКИ*/
