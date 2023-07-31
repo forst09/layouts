@@ -1,1 +1,13 @@
+- var menuLinks = ['Макеты', 'Новости', 'Контакты'];
+
 header.header
+    .wrapper.header__wrapper 
+        .logo.img.img--contain   
+            img(src="@img/icons/logo.svg" alt="Логотип")
+        nav.header__nav.display-none 
+            ul.header__nav-list
+                each item in menuLinks 
+                    li.header__nav-link= item
+        a.header__link.display-none(href="https://t.me/+UwcYLLHHQiRhNzFi") @figmamakets
+        button.header__burger.img.img--contain    
+            img(src="@img/icons/menu.svg", alt="Меню")

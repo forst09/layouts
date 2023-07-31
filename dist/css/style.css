@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/*НАЧАЛО ОБЩИХ СТИЛЕЙ */
+:root {
+  --black: #240532;
+  --dark: #665070;
+  --light: #918299;
+  --white: #FFFFFF;
+  --bg: #F9F7F8;
+  --accent: #D6FF3F;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Winston", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--gray);
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--white);
+}
+
+.ellipsis {
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.display-none {
+  display: none;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+.scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.wrapper {
+  padding: 0 10px;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+}
+.img--contain img {
+  object-fit: contain;
+}
+.img--cover img {
+  object-fit: cover;
+}
+
+/*НАЧАЛО СТИЛЕЙ ШАПКИ*/
+.header {
+  padding-top: 10px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 15px;
+  height: 22px;
+}
+
+.header__burger {
+  width: 30px;
+  height: 15px;
+}
+
+/*КОНЕЦ СТИЛЕЙ ШАПКИ*/
+/*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
+/*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ */

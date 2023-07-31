@@ -331,3 +331,8 @@ input,
 textarea {
   -webkit-appearance: none;
 }
+
+button {
+  border: none;
+  background-color: transparent;
+}
