@@ -7,6 +7,7 @@
   --white: #FFFFFF;
   --bg: #F9F7F8;
   --accent: #D6FF3F;
+  --grey: #626286;
 }
 
 body {
@@ -49,14 +50,17 @@ body {
   padding: 0 10px;
 }
 
-.img img {
+.img img,
+.img svg {
   width: 100%;
   height: 100%;
 }
-.img--contain img {
+.img--contain img,
+.img--contain svg {
   object-fit: contain;
 }
-.img--cover img {
+.img--cover img,
+.img--cover svg {
   object-fit: cover;
 }
 
@@ -88,7 +92,7 @@ body {
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ ДЕСКТОП*/
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
 .header {
-  padding-top: 10px;
+  padding: 10px 0;
 }
 
 .header__wrapper {
@@ -253,3 +257,41 @@ body {
   }
 }
 /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
+.hero__title {
+  font-size: 29px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.hero__title span {
+  color: var(--grey);
+}
+
+.hero__text {
+  margin-top: 10px;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+@media (min-width: 640px) {
+  .hero__wrapper {
+    display: grid;
+    grid-template-areas: "title title" "... btn" "text text";
+  }
+  .hero__title {
+    font-size: 48px;
+    max-width: 600px;
+    grid-area: title;
+  }
+  .btn-video {
+    display: inline-block;
+    width: 135px;
+    height: 45px;
+    grid-area: btn;
+    margin-top: -48px;
+    margin-right: 40px;
+  }
+  .hero__text {
+    max-width: 557px;
+    grid-area: text;
+  }
+}

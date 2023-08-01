@@ -1,0 +1,46 @@
+.hero__title {
+    font-size: 29px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    span {
+        color: var(--grey);
+    }
+}
+
+.hero__text {
+    margin-top: 10px;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+@media(min-width: 640px) {
+    .hero__wrapper {
+        display: grid;
+        grid-template-areas:
+            "title title"
+            "... btn"
+            "text text";
+    }
+
+    .hero__title {
+        font-size: 48px;
+        max-width: 600px;
+        grid-area: title;
+    }
+
+    .btn-video {
+        display: inline-block;
+        width: 135px;
+        height: 45px;
+        grid-area: btn;
+        margin-top: -48px;
+        margin-right: 40px;
+    }
+
+    .hero__text {
+        max-width: 557px;
+        grid-area: text;
+    }
+
+}
