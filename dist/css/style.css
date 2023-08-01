@@ -16,7 +16,7 @@ body {
   color: var(--black);
   overflow-x: hidden;
   position: relative;
-  background-color: var(--white);
+  background-color: var(--bg);
   font-size: 14px;
 }
 
@@ -60,6 +60,10 @@ body {
   object-fit: cover;
 }
 
+.not-scroll {
+  overflow-y: hidden;
+}
+
 /*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
 /*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
@@ -94,6 +98,7 @@ body {
 }
 
 .logo {
+  display: inline-block;
   width: 15px;
   height: 22px;
 }
@@ -145,5 +150,81 @@ body {
     display: none;
   }
 }
-/*НАЧАЛО СТИЛЕЙ ШАПКИ ДЕСКТОП*/
+/*КОНЕЦ СТИЛЕЙ ШАПКИ ДЕСКТОП*/
 /*КОНЕЦ СТИЛЕЙ ШАПКИ*/
+/*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
+.mobile-menu {
+  position: fixed;
+  left: 0;
+  top: -100vh;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.7s ease, opacity 0.3s ease;
+}
+.mobile-menu.active {
+  top: 0;
+  opacity: 1;
+  z-index: 100;
+  visibility: visible;
+}
+
+.mobile-menu__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-menu__close {
+  width: 11px;
+  height: 11px;
+}
+
+.mobile-menu__nav {
+  margin-top: 50px;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu__link {
+  font-size: 20px;
+}
+
+.mobile-menu__tg {
+  position: relative;
+  margin-top: auto;
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+}
+.mobile-menu__tg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--black);
+}
+
+@media (orientation: landscape) {
+  .mobile-menu__nav {
+    max-height: 50vh;
+    overflow: auto;
+  }
+}
+/*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/

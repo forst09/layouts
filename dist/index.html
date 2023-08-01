@@ -10,7 +10,7 @@
   </head>
   <body> 
     <header class="header">
-      <div class="wrapper header__wrapper"> <a class="logo img img--contain" href="">  <img src="img/icons/logo.svg" alt="Логотип"></a>
+      <div class="wrapper header__wrapper"> <a class="logo img img--contain" href="#">  <img src="img/icons/logo.svg" alt="Логотип"></a>
         <nav class="header__nav display-none"> 
           <ul class="header__nav-list">
             <li class="header__nav-item"><a class="header__nav-link" href="layots.html">Макеты</a></li>
@@ -18,9 +18,27 @@
             <li class="header__nav-item"><a class="header__nav-link" href="contacts.html">Контакты</a></li>
           </ul>
         </nav><a class="header__link display-none" href="https://t.me/+UwcYLLHHQiRhNzFi">@figmamakets</a>
-        <button class="header__burger img img--contain">   <img src="img/icons/menu.svg" alt="Меню"></button>
+        <button class="header__burger img img--contain" id="burger">   <img src="img/icons/menu.svg" alt="Меню"></button>
       </div>
     </header>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="wrapper mobile-menu__wrapper">
+        <div class="mobile-menu__header"> <a class="logo img img--contain" href="#">  <img src="img/icons/logo.svg" alt="Логотип"></a>
+          <button class="mobile-menu__close img img--contain" id="closeMobile"><img src="img/icons/close.svg" alt="Закрыть"></button>
+        </div>
+        <nav class="mobile-menu__nav"> 
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Макеты</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Контакты</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Новости</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Участвовать в конкурсе</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Ответы на вопросы</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Сотрудничество</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Политика конфиденциальности</a></li>
+          </ul>
+        </nav><a class="mobile-menu__tg" href="https://t.me/+UwcYLLHHQiRhNzFi">@figmamakets</a>
+      </div>
+    </div>
     <footer class="footer"></footer>
     <script src="js/app.min.js"></script>
   </body>

@@ -1,10 +1,10 @@
 - var menuText = ['Макеты', 'Новости', 'Контакты'];
 - var menuLinks = ['layots.html', 'news.html', 'contacts.html'];
-- var hehe = 'hehe';
+- var mobileMenu = ['Макеты', 'Контакты', 'Новости', 'Участвовать в конкурсе', 'Ответы на вопросы', 'Сотрудничество', 'Политика конфиденциальности'];
 
 header.header
     .wrapper.header__wrapper 
-        a.logo.img.img--contain(href="")   
+        a.logo.img.img--contain(href="#")   
             img(src="@img/icons/logo.svg" alt="Логотип")
         nav.header__nav.display-none 
             ul.header__nav-list
@@ -12,5 +12,19 @@ header.header
                     li.header__nav-item
                         a.header__nav-link(href=menuLinks[index])= item
         a.header__link.display-none(href="https://t.me/+UwcYLLHHQiRhNzFi") @figmamakets
-        button.header__burger.img.img--contain    
+        button.header__burger.img.img--contain(id="burger")    
             img(src="@img/icons/menu.svg", alt="Меню")
+
+.mobile-menu(id="mobileMenu")
+    .wrapper.mobile-menu__wrapper
+        .mobile-menu__header 
+            a.logo.img.img--contain(href="#")   
+                img(src="@img/icons/logo.svg" alt="Логотип")
+            button.mobile-menu__close.img.img--contain(id="closeMobile")
+                img(src="@img/icons/close.svg" alt="Закрыть")
+        nav.mobile-menu__nav 
+            ul.mobile-menu__list
+                each item in mobileMenu
+                    li.mobile-menu__item
+                        a.mobile-menu__link(href="")= item
+        a.mobile-menu__tg(href="https://t.me/+UwcYLLHHQiRhNzFi") @figmamakets
