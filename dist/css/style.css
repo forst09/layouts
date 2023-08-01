@@ -183,6 +183,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 10px;
 }
 
 .mobile-menu__close {
@@ -191,7 +192,9 @@ body {
 }
 
 .mobile-menu__nav {
-  margin-top: 50px;
+  margin-top: 40px;
+  max-height: 74vh;
+  overflow: auto;
 }
 
 .mobile-menu__list {
@@ -224,7 +227,29 @@ body {
 @media (orientation: landscape) {
   .mobile-menu__nav {
     max-height: 50vh;
-    overflow: auto;
+  }
+}
+@media (orientation: landscape) and (min-width: 640px) {
+  .mobile-menu__nav {
+    max-height: 68vh;
+  }
+}
+@media (min-width: 640px) {
+  .mobile-menu {
+    padding: 20px 0;
+  }
+  .mobile-menu__header {
+    border-bottom: 1px solid var(--black);
+  }
+  .mobile-menu__close {
+    width: 20px;
+    height: 20px;
+  }
+  .mobile-menu__link {
+    font-size: 30px;
+  }
+  .mobile-menu__tg {
+    font-size: 36px;
   }
 }
 /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
