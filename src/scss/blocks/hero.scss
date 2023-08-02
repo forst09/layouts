@@ -14,13 +14,61 @@
     font-weight: 500;
 }
 
+.hero__img {
+    width: 100%;
+    height: 210px;
+    border-radius: 50px 50px 0 0;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.hero__btns {
+    position: relative;
+    height: 15px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 1px;
+        width: 98%;
+        background-color: var(--light);
+        transform: translateY(-50%);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 85px;
+        height: 15px;
+        background-image: url(../../img/icons/shine-black.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translateY(-50%);
+    }
+}
+
+.hero__media {
+    margin-top: 5px;
+}
+
 @media(min-width: 640px) {
     .hero__wrapper {
         display: grid;
         grid-template-areas:
-            "title title"
-            "... btn"
+            "title btn"
             "text text";
+        grid-template-columns: 90% 10%;
+        max-width: 600px;
     }
 
     .hero__title {
@@ -29,18 +77,149 @@
         grid-area: title;
     }
 
+    .btn-video__wrapper {
+        grid-area: btn;
+    }
+
     .btn-video {
         display: inline-block;
         width: 135px;
         height: 45px;
-        grid-area: btn;
-        margin-top: -48px;
-        margin-right: 40px;
+        margin-top: 71px;
+        margin-left: -115px;
     }
 
     .hero__text {
         max-width: 557px;
         grid-area: text;
     }
+}
 
+@media(min-width: 1600px) {
+    .hero {
+        margin-top: 30px;
+    }
+
+    .hero__wrapper {
+        max-width: 1500px;
+        grid-template-areas:
+            "title btn"
+            "title text";
+        grid-template-columns: 70% 30%;
+    }
+
+    .hero__title {
+        font-size: 98px;
+        max-width: unset;
+    }
+
+    .btn-video__wrapper {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        // position: relative;
+
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     display: block;
+        //     left: 50%;
+        //     bottom: -8px;
+        //     width: 85px;
+        //     height: 15px;
+        //     background-image: url("../../img/icons/shine.svg");
+        //     background-position: center center;
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     transform: translateX(-50%);
+        //     cursor: default;
+        // }
+    }
+
+    .shine {
+        display: block;
+    }
+
+    .btn-video {
+        margin: 28px 0 0 -2px;
+        width: 210px;
+        height: 70px;
+    }
+
+    .hero__text {
+        width: 557px;
+        margin-top: -5px;
+        margin-left: -173px;
+        line-height: 22px;
+    }
+
+    .waves {
+        animation: waves infinite 3s ease-in-out alternate;
+    }
+
+    @keyframes waves {
+        0% {
+            transform: translateY(10px);
+        }
+
+        100% {
+            transform: translateY(-30px);
+        }
+    }
+
+    .shine__path:nth-child(1) {
+        animation: shine-1 8s infinite ease-in-out;
+    }
+
+    .shine__path:nth-child(2) {
+        animation: shine-2 8s infinite ease-in-out;
+    }
+
+    .shine__path:nth-child(3) {
+        animation: shine-3 8s infinite ease-in-out;
+    }
+
+    @keyframes shine-1 {
+        0% {
+            fill: var(--light);
+        }
+
+        25% {
+            fill: var(--accent);
+        }
+
+        50% {
+            fill: var(--light);
+        }
+    }
+
+    @keyframes shine-2 {
+        25% {
+            fill: var(--light);
+        }
+
+        50% {
+            fill: var(--accent);
+        }
+
+        75% {
+            fill: var(--light);
+        }
+    }
+
+    @keyframes shine-3 {
+        50% {
+            fill: var(--light);
+        }
+
+        75% {
+            fill: var(--accent);
+        }
+
+        100% {
+            fill: var(--light);
+        }
+    }
 }

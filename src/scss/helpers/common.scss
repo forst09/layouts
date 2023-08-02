@@ -7,6 +7,7 @@
     --bg: #F9F7F8;
     --accent: #D6FF3F;
     --grey: #626286;
+    --border: #827089;
 }
 
 body {
@@ -77,6 +78,20 @@ body {
 
 .not-scroll {
     overflow-y: hidden;
+}
+
+.btn {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    background-color: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: 40px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
 }
 
 /*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
