@@ -92,6 +92,28 @@ body {
 .text {
   line-height: 19px;
 }
+.text--light {
+  color: var(--dark);
+  opacity: 0.8;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
 
 /*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
 /*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
@@ -282,6 +304,10 @@ body {
   }
 }
 /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
+.hero {
+  margin: 0;
+}
+
 .hero__title {
   font-size: 29px;
   font-weight: 700;
@@ -590,4 +616,30 @@ body {
   .ticker__item {
     font-size: 40px;
   }
+}
+.about__wrapper {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 29px;
+}
+
+.about__item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  border-top: 1px solid var(--light);
+  gap: 5px;
+}
+
+.about__value {
+  font-family: "Vasek";
+  font-size: 30px;
+  line-height: 33px;
+}
+
+.about__desc {
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--dark);
 }

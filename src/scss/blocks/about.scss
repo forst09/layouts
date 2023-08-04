@@ -1,0 +1,26 @@
+.about__wrapper {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 29px;
+}
+
+.about__item {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    border-top: 1px solid var(--light);
+    gap: 5px;
+}
+
+.about__value {
+    font-family: "Vasek";
+    font-size: 30px;
+    line-height: 33px;
+}
+
+.about__desc {
+    font-size: 12px;
+    line-height: 17px;
+    color: var(--dark);
+}
