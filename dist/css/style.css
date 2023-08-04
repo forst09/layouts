@@ -584,4 +584,10 @@ body {
     right: 60px;
     bottom: 82px;
   }
+  .ticker {
+    margin-top: 50px;
+  }
+  .ticker__item {
+    font-size: 40px;
+  }
 }
