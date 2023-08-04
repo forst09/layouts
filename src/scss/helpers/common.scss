@@ -166,6 +166,26 @@ body {
         max-width: 1520px;
         margin: 0 auto;
     }
+
+    .section__wrapper {
+        display: flex;
+        gap: 20px;
+    }
+
+    .section__title {
+        width: 365px;
+        flex-shrink: 0;
+    }
+
+    .section__content {
+        flex-grow: 1;
+    }
+
+    .subtitle {
+        font-size: 40px;
+        line-height: 44px;
+        margin-bottom: 20px;
+    }
 }
 
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ ДЕСКТОП*/

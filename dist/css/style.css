@@ -145,6 +145,22 @@ body {
     max-width: 1520px;
     margin: 0 auto;
   }
+  .section__wrapper {
+    display: flex;
+    gap: 20px;
+  }
+  .section__title {
+    width: 365px;
+    flex-shrink: 0;
+  }
+  .section__content {
+    flex-grow: 1;
+  }
+  .subtitle {
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 20px;
+  }
 }
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ ДЕСКТОП*/
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
@@ -630,8 +646,9 @@ body {
 .about__wrapper {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: repeat(3, 75px);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
+  gap: 29px;
 }
 
 .about__item {
@@ -660,7 +677,8 @@ body {
   }
   .about__wrapper {
     margin-top: 15px;
-    grid-template-columns: repeat(3, 140px);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 62px;
   }
   .about__value {
     font-size: 64px;
@@ -669,5 +687,18 @@ body {
   .about__desc {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+@media (min-width: 1600px) {
+  .about__text {
+    font-size: 18px;
+  }
+  .about__wrapper {
+    margin-top: 20px;
+    grid-template-columns: repeat(3, 365px);
+    gap: 20px;
+  }
+  .about__item {
+    padding-top: 20px;
   }
 }

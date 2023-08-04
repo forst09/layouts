@@ -1,8 +1,9 @@
 .about__wrapper {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 75px);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
+    gap: 29px;
 }
 
 .about__item {
@@ -32,7 +33,8 @@
 
     .about__wrapper {
         margin-top: 15px;
-        grid-template-columns: repeat(3, 140px);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 62px;
     }
 
     .about__value {
@@ -43,5 +45,21 @@
     .about__desc {
         font-size: 14px;
         line-height: 20px;
+    }
+}
+
+@media(min-width: 1600px) {
+    .about__text {
+        font-size: 18px;
+    }
+
+    .about__wrapper {
+        margin-top: 20px;
+        grid-template-columns: repeat(3, 365px);
+        gap: 20px;
+    }
+
+    .about__item {
+        padding-top: 20px;
     }
 }
