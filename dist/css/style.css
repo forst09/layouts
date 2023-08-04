@@ -435,6 +435,47 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
   }
+  .ticker {
+    position: relative;
+    display: block;
+    margin-top: 44px;
+    overflow: hidden;
+  }
+  .ticker__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .ticker__item {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    white-space: nowrap;
+    position: relative;
+    padding: 0 40px;
+    animation: ticker 5s infinite linear reverse;
+  }
+  .ticker__item::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-image: url(../../img/icons/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  @keyframes ticker {
+    0% {
+      transform: translateZ(0);
+    }
+    100% {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
 }
 @media (min-width: 1600px) {
   .hero {
@@ -522,5 +563,15 @@ body {
     100% {
       fill: var(--light);
     }
+  }
+  .hero__btns {
+    max-width: 1435px;
+  }
+  .hero__img {
+    height: 545px;
+  }
+  .btn-tg {
+    right: 60px;
+    bottom: 82px;
   }
 }
