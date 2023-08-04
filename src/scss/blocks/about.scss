@@ -1,8 +1,8 @@
 .about__wrapper {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 29px;
+    grid-template-columns: repeat(3, 75px);
+    justify-content: space-between;
 }
 
 .about__item {
@@ -23,4 +23,25 @@
     font-size: 12px;
     line-height: 17px;
     color: var(--dark);
+}
+
+@media(min-width: 640px) {
+    .about {
+        margin-top: 44px;
+    }
+
+    .about__wrapper {
+        margin-top: 15px;
+        grid-template-columns: repeat(3, 140px);
+    }
+
+    .about__value {
+        font-size: 64px;
+        line-height: 70px;
+    }
+
+    .about__desc {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }

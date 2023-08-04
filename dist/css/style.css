@@ -123,6 +123,16 @@ body {
   .wrapper {
     padding: 0 20px;
   }
+  .section {
+    margin-top: 80px;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .subtitle {
+    font-size: 26px;
+    line-height: 29px;
+  }
 }
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ ПЛАНШЕТ*/
 /*НАЧАЛО ОБЩИХ СТИЛЕЙ ДЕСКТОП*/
@@ -620,8 +630,8 @@ body {
 .about__wrapper {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 29px;
+  grid-template-columns: repeat(3, 75px);
+  justify-content: space-between;
 }
 
 .about__item {
@@ -642,4 +652,22 @@ body {
   font-size: 12px;
   line-height: 17px;
   color: var(--dark);
+}
+
+@media (min-width: 640px) {
+  .about {
+    margin-top: 44px;
+  }
+  .about__wrapper {
+    margin-top: 15px;
+    grid-template-columns: repeat(3, 140px);
+  }
+  .about__value {
+    font-size: 64px;
+    line-height: 70px;
+  }
+  .about__desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
