@@ -146,15 +146,15 @@ body {
     margin: 0 auto;
   }
   .section__wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
   .section__title {
-    width: 365px;
-    flex-shrink: 0;
+    grid-column: span 1;
   }
   .section__content {
-    flex-grow: 1;
+    grid-column: span 3;
   }
   .subtitle {
     font-size: 40px;
