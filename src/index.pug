@@ -45,10 +45,9 @@ html(lang="ru")
                                 source(srcset="@img/hero/hero-tablet.jpg" media="(min-width:640px)")
                                 img(src="@img/hero/hero-mobile.jpg", alt="Главная картинка")                        
                         a.btn.btn-tg(href="https://t.me/+UwcYLLHHQiRhNzFi")
-                            <svg class="btn-tg__icon display-none">
-                                <use xlink:href="@img/sprite.svg#tg"></use>
-                            </svg>
-                            span.btn-tg__text ПЕРЕЙТИ В ТЕЛЕГРАМ
+                            svg.btn-tg__icon.display-none
+                                use(xlink:href="@img/sprite.svg#tg")
+                            span.btn__text.btn-tg__text ПЕРЕЙТИ В ТЕЛЕГРАМ
                 .ticker.display-none 
                         .ticker__wrapper 
                             span.ticker__item ИЗБРАННАЯ коллекцИя макетов
@@ -78,5 +77,51 @@ html(lang="ru")
                                 span.about__value 20
                                 span.about__desc Проведенных конкурсов
             //- КОНЕЦ О НАС
+
+            //- НАЧАЛО САМОЕ ПОПУЛЯРНОЕ
+            section.section.popular 
+                .section__wrapper.wrapper 
+                    .section__title
+                        h2.title Самое популярное
+                    .section__content 
+                        article.accordion
+                            .accordion__img.img.img--cover     
+                                img(src="@img/popular/popular-1.jpg" alt="Макет лендинга для системы блокчейн") 
+                            .accordion__content
+                                h4.accordion__title Макет лендинга для системы блокчейн
+                                p.accordion__date 29 мая 2023 г.
+                                .accordion__text 
+                                    p.accordion__text-item <span>Уровень сложности:</span> Сложный 
+                                    p.accordion__text-item <span>Тип:</span> Многостраничный сайт
+                                    p.accordion__text-item <span>Адаптивность:</span> Адаптивный
+                                    p.accordion__text-item <span>Язык:</span> EN
+                                    p.accordion__text-item <span>Цветовая тема:</span> черная
+                                    p.accordion__text-item <span>Цена макета:</span> ~18000-21000 &#8381;
+                            a.btn.accordion__btn(href="#")
+                                span.btn__text открыть 
+                            button.accordion__open 
+                                svg.accordion__open-icon
+                                    use(xlink:href="@img/sprite.svg#accordionBtn")
+                        article.accordion
+                            .accordion__img.img.img--cover     
+                                img(src="@img/popular/popular-1.jpg" alt="Макет лендинга для системы блокчейн") 
+                            .accordion__content
+                                h4.accordion__title Макет лендинга для системы блокчейн
+                                p.accordion__date 29 мая 2023 г.
+                                .accordion__text 
+                                    p.accordion__text-item <span>Уровень сложности:</span> Сложный 
+                                    p.accordion__text-item <span>Тип:</span> Многостраничный сайт
+                                    p.accordion__text-item <span>Адаптивность:</span> Адаптивный
+                                    p.accordion__text-item <span>Язык:</span> EN
+                                    p.accordion__text-item <span>Цветовая тема:</span> черная
+                                    p.accordion__text-item <span>Цена макета:</span> ~18000-21000 &#8381;
+                            a.btn.accordion__btn(href="#")
+                                span.btn__text открыть 
+                            button.accordion__open 
+                                svg.accordion__open-icon
+                                    use(xlink:href="@img/sprite.svg#accordionBtn")
+                       
+            //- КОНЕЦ САМОЕ ПОПУЛЯРНОЕ
+
         include html/footer
         script(src='js/app.min.js')
