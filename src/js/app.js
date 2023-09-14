@@ -1,3 +1,6 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger.js";
+
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -37,6 +40,20 @@ document.addEventListener('DOMContentLoaded', function () {
             mobileMenu.classList.remove('active');
             document.querySelector('body').classList.remove('not-scroll');
         });
+    }
+
+    //gsap 
+    if (window.innerWidth >= 1600) {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to('.hero__img img', {
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'bottom 100%',
+                end: 'bottom 10%',
+                scrub: 1
+            },
+            y: '-38%'
+        })
     }
 
 });

@@ -371,7 +371,7 @@ body {
   left: 0;
   top: 50%;
   height: 1px;
-  width: 98%;
+  width: calc(100% - 3px);
   background-color: var(--light);
   transform: translateY(-50%);
 }
@@ -428,7 +428,6 @@ body {
     top: unset;
     transform: unset;
     bottom: 20px;
-    width: 99%;
   }
   .hero__btns::after {
     z-index: 0;
@@ -631,6 +630,10 @@ body {
   }
   .hero__img {
     height: 545px;
+  }
+  .hero__img img {
+    height: 1710px;
+    transform: translateY(-34%);
   }
   .btn-tg {
     right: 60px;

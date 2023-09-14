@@ -41,7 +41,7 @@
         left: 0;
         top: 50%;
         height: 1px;
-        width: 98%;
+        width: calc(100% - 3px);
         background-color: var(--light);
         transform: translateY(-50%);
     }
@@ -107,7 +107,6 @@
             top: unset;
             transform: unset;
             bottom: 20px;
-            width: 99%;
         }
 
         &::after {
@@ -372,6 +371,11 @@
 
     .hero__img {
         height: 545px;
+
+        img {
+            height: 1710px;
+            transform: translateY(-34%);
+        }
     }
 
     .btn-tg {
