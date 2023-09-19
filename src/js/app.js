@@ -42,6 +42,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    //accordion
+    document.querySelectorAll('.accordion').forEach((item) => {
+        item.addEventListener('click', function () {
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+            }
+            else {
+                const parent = item.closest('section');
+                const currentAccordions = parent.querySelectorAll('.accordion');
+                currentAccordions.forEach((item) => {
+                    item.classList.remove('active');
+                })
+                item.classList.add('active');
+            }
+        })
+    });
+
     //gsap 
     if (window.innerWidth >= 1600) {
         gsap.registerPlugin(ScrollTrigger);
