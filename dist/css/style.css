@@ -20,6 +20,7 @@ body {
   position: relative;
   background-color: var(--bg);
   font-size: 14px;
+  padding-bottom: 200px;
 }
 
 .ellipsis {
@@ -45,6 +46,11 @@ body {
   width: 0;
   height: 0;
   background: transparent;
+}
+
+.scroll__inner {
+  display: inline-flex;
+  margin: 0 10px;
 }
 
 .wrapper {
@@ -133,6 +139,9 @@ body {
   .subtitle {
     font-size: 26px;
     line-height: 29px;
+  }
+  .scroll__inner {
+    margin: 0 20px;
   }
 }
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ ПЛАНШЕТ*/
@@ -882,5 +891,92 @@ body {
   }
   .accordion__btn {
     margin-top: 25px;
+  }
+}
+.categories__swiper-wrapper {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.categories__swiper-link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  aspect-ratio: 3/2;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.categories__swiper-title {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  max-width: calc(100% - 20px);
+}
+
+@media (min-width: 470px) {
+  .categories__swiper-wrapper {
+    flex-direction: row;
+    display: inline-flex;
+    width: auto;
+  }
+  .categories__swiper-slide {
+    width: auto;
+  }
+  .categories__swiper-link {
+    width: 234px;
+    aspect-ratio: 1/1;
+  }
+}
+@media (min-width: 1024px) {
+  .categories__swiper-wrapper {
+    gap: unset;
+    display: flex;
+    width: 100%;
+    margin: unset;
+  }
+  .categories__swiper-link {
+    width: 365px;
+  }
+  .categories__swiper-title {
+    font-size: 25px;
+    line-height: 30px;
+    left: 20px;
+    bottom: 20px;
+  }
+  .categories__swiper {
+    overflow: hidden;
+    min-height: 499px;
+  }
+  .categories__swiper-slide {
+    width: auto !important;
+  }
+  .categories__swiper-slide.swiper-slide-active .categories__swiper-link {
+    width: 499px;
+  }
+  .categories__swiper-btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 74px;
+    right: 10%;
+  }
+  .categories__swiper-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .categories__swiper-btns-icon {
+    stroke: var(--border);
+    fill: transparent;
+  }
+  .categories__swiper-next {
+    transform: rotate(180deg);
   }
 }

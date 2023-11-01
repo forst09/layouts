@@ -19,6 +19,7 @@ body {
     position: relative;
     background-color: var(--bg);
     font-size: 14px;
+    padding-bottom: 200px;
 }
 
 .ellipsis {
@@ -45,6 +46,11 @@ body {
         height: 0;
         background: transparent;
     }
+}
+
+.scroll__inner {
+    display: inline-flex;
+    margin: 0 10px;
 }
 
 .wrapper {
@@ -151,6 +157,10 @@ body {
     .subtitle {
         font-size: 26px;
         line-height: 29px;
+    }
+
+    .scroll__inner {
+        margin: 0 20px;
     }
 }
 

@@ -1,5 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 
 'use strict';
 
@@ -58,6 +60,20 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
     });
+
+    if (window.innerWidth >= 1024) {
+        //swiper categories
+        const swiperCategories = new Swiper('.categories__swiper', {
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.categories__swiper-next',
+                prevEl: '.categories__swiper-prev',
+            },
+        });
+    }
 
     //gsap 
     if (window.innerWidth >= 1600) {
